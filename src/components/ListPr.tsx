@@ -8,7 +8,7 @@ import {
   StackDivider,
   Box,
 } from "@chakra-ui/react";
-import type { PR } from ".prisma/client";
+import type { PR } from "@prisma/client";
 
 export function ListPr({ logs }: { logs: Array<PR> }) {
   return (

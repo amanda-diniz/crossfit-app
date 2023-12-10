@@ -1,4 +1,4 @@
-import { Repetition } from ".prisma/client";
+import { Repetition } from "@prisma/client";
 import {
   Heading,
   Card,
