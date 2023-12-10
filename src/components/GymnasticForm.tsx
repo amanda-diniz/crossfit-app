@@ -18,18 +18,28 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { GYMNASTIC_EXERCISES } from "@/lib/data";
-import { Controller, useForm } from "react-hook-form";
-import DatePicker from "react-datepicker";
+import { Controller, SubmitHandler, useForm } from "react-hook-form";
+import { SingleDatepicker } from "chakra-dayzed-datepicker";
+
+type Inputs = {
+  exercise: string,
+  repetitions: number,
+  date: Date
+};
 
 export function GymnasticForm() {
   const {
     register,
     handleSubmit,
-    watch,
     control,
     formState: { errors },
-  } = useForm();
-  const onSubmit = (data) => console.log(data);
+  } = useForm<Inputs>({
+    defaultValues: {
+      date: new Date(),
+    }
+  });
+  
+  const onSubmit: SubmitHandler<Inputs> = data => console.log(data);
 
   return (
     <>
@@ -48,7 +58,7 @@ export function GymnasticForm() {
                 <FormLabel>Exercício</FormLabel>
                 <Select
                   placeholder="Escolha o exercício"
-                  {...register("exercice")}
+                  {...register("exercise")}
                 >
                   {GYMNASTIC_EXERCISES.map((exercise) => {
                     return (
@@ -84,12 +94,15 @@ export function GymnasticForm() {
                 <FormLabel>Data</FormLabel>
                 <Controller
                   control={control}
-                  name="date-input"
+                  name="date"
                   render={({ field }) => (
-                    <DatePicker
-                      placeholderText="Select date"
-                      onChange={(date) => field.onChange(date)}
-                      selected={field.value}
+                    <SingleDatepicker
+                      name="date"
+                      date={field.value}
+                      onDateChange={(date) => field.onChange(date)}
+                      configs={{
+                        dateFormat: 'dd/MM/yyyy',
+                      }}
                     />
                   )}
                 />
