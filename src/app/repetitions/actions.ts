@@ -2,6 +2,7 @@
 
 import { PrismaClient } from '@prisma/client'
 import { z } from 'zod'
+import { redirect } from 'next/navigation'
 
 const prisma = new PrismaClient()
 
@@ -29,5 +30,5 @@ export async function createRepetition(formData: FormData) {
   const res = await prisma.repetition.create({
     data: validatedFields.data,
   })
-  console.log(res)
+  redirect('/repetitions')  
 }
