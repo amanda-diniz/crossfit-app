@@ -17,7 +17,6 @@ import {
   ButtonGroup,
   Text,
 } from "@chakra-ui/react";
-import { DatePicker } from "@orange_digital/chakra-datepicker";
 import { WEIGHTLIFT_EXERCISES } from "@/lib/data";
 
 export function WeightLiftForm() {
@@ -58,7 +57,6 @@ export function WeightLiftForm() {
             </FormControl>
             <FormControl>
               <FormLabel>Data</FormLabel>
-              <DatePicker initialValue={new Date()} />
             </FormControl>
             <ButtonGroup spacing="2">
               <Button colorScheme="blue">Save</Button>
