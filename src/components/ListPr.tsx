@@ -1,4 +1,3 @@
-import { Repetition } from ".prisma/client";
 import {
   Heading,
   Card,
@@ -9,13 +8,14 @@ import {
   StackDivider,
   Box,
 } from "@chakra-ui/react";
+import type { PR } from ".prisma/client";
 
-export function ListGymnastic({ logs }: { logs: Array<Repetition> }) {
+export function ListPr({ logs }: { logs: Array<PR> }) {
   return (
     <>
       <Card variant="outline">
         <CardHeader pb={1}>
-          <Heading size="md">Registros de repetições</Heading>
+          <Heading size="md">Registros de PR</Heading>
         </CardHeader>
         <CardBody>
           <Stack divider={<StackDivider />} spacing="4">
@@ -25,10 +25,10 @@ export function ListGymnastic({ logs }: { logs: Array<Repetition> }) {
                   {log.exercise}
                 </Heading>
                 <Text pt="2" fontSize="sm">
-                  Repetições: {log.repetition}
+                  Peso: {log.weight}
                 </Text>
                 <Text pt="2" fontSize="sm">
-                  Data: {log.date.toLocaleDateString('pt-BR')}
+                  Data: {log.date.toLocaleDateString("pt-BR")}
                 </Text>
               </Box>
             ))}
@@ -38,4 +38,3 @@ export function ListGymnastic({ logs }: { logs: Array<Repetition> }) {
     </>
   );
 }
-

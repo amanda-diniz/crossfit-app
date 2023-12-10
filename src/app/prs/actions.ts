@@ -2,6 +2,8 @@
 
 import { PrismaClient } from '@prisma/client'
 import { z } from 'zod'
+import { redirect } from 'next/navigation'
+
 
 const prisma = new PrismaClient()
 
@@ -29,5 +31,5 @@ export async function createPR(formData: FormData) {
   const res = await prisma.pR.create({
     data: validatedFields.data,
   })
-  console.log(res)
+  redirect('/prs')  
 }

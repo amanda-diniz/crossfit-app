@@ -8,19 +8,16 @@ datasource db {
   directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
 }
 
-
 model PR {
-  id       Int     @id @default(autoincrement())
+  id       Int      @id @default(autoincrement())
   exercise String?
-  date DateTime @db.Date
-  weight Decimal     
+  date     DateTime @db.Date
+  weight   Float
 }
-
 
 model Repetition {
-  id       Int     @id @default(autoincrement())
-  exercise String?
-  date DateTime @db.Date
-  repetition Int     
+  id         Int      @id @default(autoincrement())
+  exercise   String?
+  date       DateTime @db.Date
+  repetition Int
 }
-
