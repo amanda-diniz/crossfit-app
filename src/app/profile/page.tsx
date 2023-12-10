@@ -22,7 +22,7 @@ export default function Profile() {
   return (
     <>
       <Container pb={10} pt={10}>
-        <Card>
+        <Card variant="outline">
           <CardHeader>
             <Heading size="md">Seus dados</Heading>
           </CardHeader>

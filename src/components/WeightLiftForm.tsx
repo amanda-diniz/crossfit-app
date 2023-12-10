@@ -23,7 +23,7 @@ import { WEIGHTLIFT_EXERCISES } from "@/lib/data";
 export function WeightLiftForm() {
   return (
     <>
-      <Card>
+      <Card variant="outline">
         <CardHeader pb={1}>
           <Heading size="md">Registro de PR</Heading>
           <Text fontSize="16px" color="gray">
@@ -60,7 +60,7 @@ export function WeightLiftForm() {
               <FormLabel>Data</FormLabel>
               <DatePicker initialValue={new Date()} />
             </FormControl>
-            <ButtonGroup variant="outline" spacing="6">
+            <ButtonGroup spacing="2">
               <Button colorScheme="blue">Save</Button>
               <Button>Cancel</Button>
             </ButtonGroup>
