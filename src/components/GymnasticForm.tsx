@@ -18,29 +18,12 @@ import {
   Text,
 } from "@chakra-ui/react";
 import { GYMNASTIC_EXERCISES } from "@/lib/data";
-import { Controller, SubmitHandler, useForm } from "react-hook-form";
 import { SingleDatepicker } from "chakra-dayzed-datepicker";
-
-type Inputs = {
-  exercise: string,
-  repetitions: number,
-  date: Date
-};
+import { useState } from "react";
+import { createRepetition } from "@/app/repetitions/actions";
 
 export function GymnasticForm() {
-  const {
-    register,
-    handleSubmit,
-    control,
-    formState: { errors },
-  } = useForm<Inputs>({
-    defaultValues: {
-      date: new Date(),
-    }
-  });
-  
-  const onSubmit: SubmitHandler<Inputs> = data => console.log(data);
-
+  const [date, setDate] = useState(new Date());
   return (
     <>
       <Card variant="outline">
@@ -52,14 +35,11 @@ export function GymnasticForm() {
           </Text>
         </CardHeader>
         <CardBody>
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form action={createRepetition}>
             <Stack spacing="2">
               <FormControl>
                 <FormLabel>Exercício</FormLabel>
-                <Select
-                  placeholder="Escolha o exercício"
-                  {...register("exercise")}
-                >
+                <Select name="exercise" placeholder="Escolha o exercício">
                   {GYMNASTIC_EXERCISES.map((exercise) => {
                     return (
                       <option value={exercise.name} key={exercise.name}>
@@ -71,40 +51,20 @@ export function GymnasticForm() {
               </FormControl>
               <FormControl>
                 <FormLabel>Repetições</FormLabel>
-                <Controller
-                  name={"repetitions"}
-                  control={control}
-                  render={({ field: { ref, ...restField } }) => (
-                    <NumberInput
-                      {...restField}
-                      defaultValue={0}
-                      min={0}
-                      max={1000}
-                    >
-                      <NumberInputField ref={ref} name={restField.name} />
-                      <NumberInputStepper>
-                        <NumberIncrementStepper />
-                        <NumberDecrementStepper />
-                      </NumberInputStepper>
-                    </NumberInput>
-                  )}
-                />
+                <NumberInput defaultValue={0} min={0} max={1000}>
+                  <NumberInputField name="repetition"/>
+                  <NumberInputStepper>
+                    <NumberIncrementStepper />
+                    <NumberDecrementStepper />
+                  </NumberInputStepper>
+                </NumberInput>
               </FormControl>
               <FormControl>
                 <FormLabel>Data</FormLabel>
-                <Controller
-                  control={control}
+                <SingleDatepicker
+                  date={date}
+                  onDateChange={setDate}
                   name="date"
-                  render={({ field }) => (
-                    <SingleDatepicker
-                      name="date"
-                      date={field.value}
-                      onDateChange={(date) => field.onChange(date)}
-                      configs={{
-                        dateFormat: 'dd/MM/yyyy',
-                      }}
-                    />
-                  )}
                 />
               </FormControl>
               <ButtonGroup spacing="2">
