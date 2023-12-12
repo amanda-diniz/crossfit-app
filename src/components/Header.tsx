@@ -9,9 +9,16 @@ export function Header() {
       borderBottomColor="lightgray"
       borderBottomStyle="solid"
       w="100%"
-      p={8}
+      py={8}
+      px={32}
+      bgColor="white"
     >
-      <Flex minWidth="max-content" alignItems="center" gap="2" justifyContent="space-between">
+      <Flex
+        minWidth="max-content"
+        alignItems="center"
+        gap="2"
+        justifyContent="space-between"
+      >
         <Logo />
         <Box>
           <Link p="10" as={NextLink} href="/">

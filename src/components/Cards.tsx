@@ -17,13 +17,13 @@ export function Cards() {
   return (
     <>
       <SimpleGrid
-        spacing={4}
-        templateColumns="repeat(auto-fill, minmax(200px, 1fr))"
+        spacing={8}
+        columns={2}
       >
         <Card variant="outline">
           <CardHeader>
             <HStack justifyContent="space-between">
-              <Heading size="md" maxW={120}>Registro de PR</Heading>
+              <Heading size="md">Registro de PR</Heading>
               <CgGym size="1.5rem" />
             </HStack>
           </CardHeader>

@@ -1,11 +1,8 @@
 "use server";
 
-import { PrismaClient } from '@prisma/client'
 import { z } from 'zod'
 import { redirect } from 'next/navigation'
-
-
-const prisma = new PrismaClient()
+import prisma from '@/lib/client';
 
 const schema = z.object({
   exercise: z.string(),
