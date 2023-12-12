@@ -3,6 +3,8 @@
 ## 🌟 Introdução
 O *CrossFit Tracker* é uma aplicação inovadora projetada para atletas de CrossFit. Se você deseja registrar e monitorar seus Personal Records (PRs) e progresso em diferentes exercícios, essa é a ferramenta perfeita para você!
 
+![Screenshot](screenshot.png)
+
 ### 🚀 Motivação
 Este projeto foi desenvolvido para aprofundar meu conhecimento em *Next.js* e explorar suas funcionalidades mais avançadas, como roteamento baseado em pastas e construção de back-end com React server component.
 
