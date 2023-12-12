@@ -21,10 +21,10 @@ export default async function Prs() {
 
   return (
     <>
-      <Container pb={10} pt={10}>
+      <Container my={10}>
         <WeightLiftForm />
       </Container>
-      <Container pb={10} pt={10}>
+      <Container>
         <ListPr logs={logs} />
       </Container>
     </>

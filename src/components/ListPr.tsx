@@ -19,8 +19,8 @@ export function ListPr({ logs }: { logs: Array<PR> }) {
         </CardHeader>
         <CardBody>
           <Stack divider={<StackDivider />} spacing="4">
-            {logs.map((log, index) => (
-              <Box key={index}>
+            {logs && logs.map((log, index) => (
+              <Box key={index} data-testid="log-box">
                 <Heading size="xs" textTransform="uppercase">
                   {log.exercise}
                 </Heading>

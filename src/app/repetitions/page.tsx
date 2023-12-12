@@ -20,10 +20,10 @@ export default async function Repetitions() {
   const logs = await getData();
   return (
     <>
-      <Container pb={10} pt={10}>
+      <Container my={10}>
         <GymnasticForm />
       </Container>
-      <Container pb={10} pt={10}>
+      <Container>
         <ListGymnastic logs={logs} />
       </Container>
     </>

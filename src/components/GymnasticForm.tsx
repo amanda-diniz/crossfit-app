@@ -69,9 +69,9 @@ export function GymnasticForm() {
               </FormControl>
               <ButtonGroup spacing="2">
                 <Button colorScheme="blue" type="submit">
-                  Save
+                  Salvar
                 </Button>
-                <Button>Cancel</Button>
+                <Button>Cancelar</Button>
               </ButtonGroup>
             </Stack>
           </form>
