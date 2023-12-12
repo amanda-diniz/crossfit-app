@@ -2,9 +2,8 @@ import { WeightLiftForm } from "@/components/WeightLiftForm";
 import { ListPr } from "@/components/ListPr";
 import { Container } from "@chakra-ui/react";
 import React from "react";
-import { PrismaClient } from "@prisma/client";
+import prisma from '@/lib/db'
 
-const prisma = new PrismaClient();
 
 async function getData() {
   const data = await prisma.pR.findMany({

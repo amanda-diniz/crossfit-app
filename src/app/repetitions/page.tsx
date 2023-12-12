@@ -2,9 +2,7 @@ import { GymnasticForm } from "@/components/GymnasticForm";
 import { ListGymnastic } from "@/components/ListGymnastic";
 import { Container } from "@chakra-ui/react";
 import React from "react";
-import { PrismaClient } from "@prisma/client";
-
-const prisma = new PrismaClient();
+import prisma from '@/lib/db'
 
 async function getData() {
   const data = await prisma.repetition.findMany({
