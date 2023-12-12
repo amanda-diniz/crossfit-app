@@ -16,6 +16,8 @@ async function getData() {
   return data;
 }
 
+export const revalidate = 0;
+
 export default async function Repetitions() {
   const logs = await getData();
   return (
