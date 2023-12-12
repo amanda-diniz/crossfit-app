@@ -10,6 +10,7 @@ O *CrossFit Tracker* é uma aplicação inovadora projetada para atletas de Cros
 Este projeto foi desenvolvido para aprofundar meu conhecimento em *Next.js* e explorar suas funcionalidades mais avançadas, como roteamento baseado em pastas e construção de back-end com React server component.
 
 📣 *Status:* Em desenvolvimento!
+🌎 *URL:* [https://crossfit.lol/](https://crossfit.lol/)
 
 ## ⚙️ Funcionalidades Principais
 - *Registro de PRs:* Insira e atualize seus PRs em movimentos variados, como levantamento de peso e exercícios ginásticos.
