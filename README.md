@@ -1,4 +1,5 @@
-# CrossFit Tracker ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=Next.js&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+# CrossFit Tracker ![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=Next.js&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB) ![Vercel](https://vercelbadge.vercel.app/api/amanda-diniz/crossfit-app?style=for-the-badge)
+
 
 ## 🌟 Introdução
 O *CrossFit Tracker* é uma aplicação inovadora projetada para atletas de CrossFit. Se você deseja registrar e monitorar seus Personal Records (PRs) e progresso em diferentes exercícios, essa é a ferramenta perfeita para você!
