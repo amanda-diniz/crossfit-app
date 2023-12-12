@@ -10,7 +10,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <Box bgImage="url('/background.jpg')" h="100vh" bgPosition="center" bgSize="cover">
+        <Box bgImage="url('/background.jpg')" minH="100vh" bgPosition="center" bgSize="cover" pb={32}>
           <Header />
           <Providers>{children}</Providers>
         </Box>
