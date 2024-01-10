@@ -2,7 +2,7 @@
 
 
 ## 🌟 Introdução
-O *CrossFit Tracker* é uma aplicação inovadora projetada para atletas de CrossFit. Se você deseja registrar e monitorar seus Personal Records (PRs) e progresso em diferentes exercícios, essa é a ferramenta perfeita para você!
+O *CrossFit Tracker* é uma aplicação  projetada para atletas de CrossFit. Se você deseja registrar e monitorar seus Personal Records (PRs) e progresso em diferentes exercícios, essa é a ferramenta perfeita para você!
 
 ![Screenshot](screenshot.png)
 
